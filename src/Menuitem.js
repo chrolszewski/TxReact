@@ -57,9 +57,11 @@ var Menuitem = React.createClass({
 				url += 'Stilarter/delete?';
 				url += `id=${this.props.id}`;
 			}
-			console.log(url)
 			axios.post(url)
 			.then(res => this.update())
+			.catch(function(err){
+				console.log("Noe feil skjedde",err);
+			});
 		}
 	},
     render(){
