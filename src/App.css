@@ -1,0 +1,33 @@
+body,
+html,
+div.app,
+div#root{
+    height: 100%;    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: red;
+
+    background: #eab92d;
+}
+
+
+div.teknikk{
+    margin: 2px;
+    position: relative;
+    box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, .2);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}

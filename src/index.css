@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+} 
+
+.left {
+  display: flex;
+  flex-direction: column;
+}

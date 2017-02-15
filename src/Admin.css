@@ -1,0 +1,14 @@
+span{
+	cursor:pointer;
+}
+
+.edit{
+	color:blue;	
+}
+.delete{
+	color:red;
+}
+
+.new{
+	color:green;
+}

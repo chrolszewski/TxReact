@@ -1,0 +1,121 @@
+[
+  {
+      "name": "BJJ", 
+      "id": 1, 
+      "isOpen": false, 
+      "children": [
+          {
+              "name": "Pensum til beltegrader",
+              "id": 1,
+              "isOpen": false,
+              "children": [
+                  {
+                      "name": "Hvitt",
+                      "id": 1
+                  },
+                  {
+                      "name": "Blått",
+                      "id": 2
+                  },
+                  {
+                      "name": "Lilla",
+                      "id": 3
+                  },
+                  {
+                      "name": "Brunt",
+                      "id": 4
+                  },
+                  {
+                      "name": "Svart",
+                      "id": 5
+                  }
+              ]
+          },
+          {
+              "name": "Gracie-teknikker",
+              "id": 2,
+              "isOpen": false,
+              "children": [
+                  {
+                      "name": "Låser",
+                      "id": 1,
+                      "children": [
+                        {
+                            "name": "Armlåser",
+                            "id": 1
+                        },
+                        {
+                            "name": "Benlåser",
+                            "id": 2
+                        }
+                    ]
+                  },
+                  {
+                      "name": "Kvelinger",
+                      "id": 2,
+                      "children": [
+                        {
+                            "name": "Lapelkveling",
+                            "id": 1
+                        },
+                        {
+                            "name": "Armkveling",
+                            "id": 2
+                        },
+                        {
+                            "name": "Benkveling",
+                            "id": 3
+                        }                        
+                    ]
+                  }
+              ]
+          }
+      ]
+  },
+  {
+      "name": "Kickboxing", 
+      "id": 2, 
+      "isOpen": false, 
+      "children": [
+          {
+            "name": "Pensum til beltegrader",
+            "id": 2,
+            "isOpen": false,
+            "children": [
+                {
+                      "name": "Hvitt",
+                      "id": 1
+                  },
+                  {
+                      "name": "Gult",
+                      "id": 2
+                  },
+                  {
+                      "name": "Orange",
+                      "id": 3
+                  },
+                  {
+                      "name": "Grønt",
+                      "id": 4
+                  },
+                  {
+                      "name": "Blått",
+                      "id": 5
+                  },
+                  {
+                      "name": "Lilla",
+                      "id": 6
+                  },
+                  {
+                      "name": "Brunt",
+                      "id": 7
+                  },
+                  {
+                      "name": "Svart",
+                      "id": 8
+                  }
+            ]
+          }
+      ]
+  }
+]
