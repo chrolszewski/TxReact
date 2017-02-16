@@ -3,6 +3,8 @@ import './menu.css';
 import './Admin.css';
 import axios from 'axios';
 
+const server = 'http://192.168.0.108:1337/'
+
 var Menuitem = React.createClass({
 	propTypes:{
 		id: React.PropTypes.number,
@@ -24,7 +26,7 @@ var Menuitem = React.createClass({
 		var navn = prompt("Gi nytt navn:");
 
 		if(navn != null){
-			var url = 'http://192.168.0.104:1337/';
+			var url = server;
 
 			if(this.props.grad && this.props.stilart){
 				url += 'Grader/update?';
@@ -45,7 +47,7 @@ var Menuitem = React.createClass({
 	},
 	remove(){
 		if(confirm("Dette vil slette elementet og alle ting under knyttet til dette. \n\nFortsette?")){
-			var url = 'http://192.168.0.104:1337/';
+			var url = server;
 
 			if(this.props.grad && this.props.stilart){
 				url += 'Grader/delete?';

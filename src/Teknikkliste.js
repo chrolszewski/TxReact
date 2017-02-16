@@ -4,6 +4,8 @@ import axios from 'axios';
 import './App.css';
 import './Admin.css';
 
+const server = 'http://192.168.0.108:1337/'
+
 var Teknikkliste = React.createClass({
 	getInitialState(){
       return {
@@ -17,7 +19,7 @@ var Teknikkliste = React.createClass({
     },
     getData(stilart,grad){
     	this.setState({teknikker:[]});
-    	var url = 'http://192.168.0.104:1337/Teknikk/pensum';
+    	var url = server+'Teknikk/pensum';
     	    url +=`?stilart=${stilart}`;
     	    url +=`&grad=${grad}`;
 
@@ -30,7 +32,6 @@ var Teknikkliste = React.createClass({
 		});
     },
     setHeader(stilartNavn,belte,stilart,grad){
-    	console.log(stilart,grad)
     	this.setState({
     		stilartNavn:stilartNavn,
     		belte:belte,
@@ -74,7 +75,7 @@ var Teknikkliste = React.createClass({
 
 		if(navn != null){
 			var beskrivelse = prompt("Beskrivelse: ");
-			var url = 'http://192.168.0.104:1337/';
+			var url = server;
 				url += 'Teknikk/create?';
 				url += `stilart=${this.state.stilart}`;
 				url += `&grad=${this.state.grad}`;

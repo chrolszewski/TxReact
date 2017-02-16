@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "babel-jest": "^18.0.0",
+    "babel-polyfill": "^6.23.0",
+    "jest": "^18.1.0",
     "react-scripts": "0.9.0"
   },
   "dependencies": {

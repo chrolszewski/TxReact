@@ -3,6 +3,7 @@ import axios from 'axios';
 import Menuitem from './Menuitem';
 import './Admin.css';
 
+const server = 'http://192.168.0.108:1337/'
 
 var Menu = React.createClass({	
 	getInitialState(){
@@ -17,7 +18,7 @@ var Menu = React.createClass({
 		this.getData(this.state.niva)
 	},
 	getData(niva,stilart){
-		var url = 'http://192.168.0.104:1337/';
+		var url = server;
 
 		switch(niva){
 			case 1:
@@ -51,7 +52,7 @@ var Menu = React.createClass({
 		var navn = prompt("Navn på det nye elementet: ","Nytt element");
 
 		if(navn != null){
-			var url = 'http://192.168.0.104:1337/';
+			var url = server;
 
 			if(this.state.stilart){
 				url += 'Grader/make?';
@@ -127,8 +128,7 @@ var Menu = React.createClass({
 
 			this.getData(this.state.niva,stilart,grad);
 		}
-		else{
-			console.log(this.state.stilartNavn, menuItem.children,menuItem.stilart,menuItem.grad)
+		else{			
 			this.props.sendHeader(this.state.stilartNavn, menuItem.children,menuItem.stilart,menuItem.grad)
 			this.props.teknikkListeGenerering(menuItem.stilart,menuItem.grad);
 		}

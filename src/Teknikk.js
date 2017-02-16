@@ -3,6 +3,7 @@ import './App.css';
 import './Admin.css';
 import axios from 'axios';
 
+const server = 'http://192.168.0.108:1337/'
 
 var Teknikk = React.createClass({	
 	edit(){
@@ -13,13 +14,11 @@ var Teknikk = React.createClass({
 			if(beskrivelse===null){
 				beskrivelse = this.props.beskrivelse;
 			}
-			var url =  'http://192.168.0.104:1337/';
+			var url =  server;
 				url += 'Teknikk/update?';
 				url += `id=${this.props.id}`;
 				url += '&navn='+navn;
-				url += '&beskrivelse='+beskrivelse;
-			
-				console.log(url)
+				url += '&beskrivelse='+beskrivelse;			
 
 			axios.post(url)
 			.then(res => this.props.update(this))
@@ -30,13 +29,16 @@ var Teknikk = React.createClass({
 	},	
 	remove(){
 		if(confirm("Dette vil slette elementet. \n\nFortsette?")){
-			var url =  'http://192.168.0.104:1337/';
+			var url =  server;
 				url += 'Teknikk/destroy?';
 				url += `id=${this.props.id}&`;			
 				
 			
 			axios.post(url)
 			.then(res => this.props.update())
+			.catch(function(err){
+				console.log("Noe feil skjedde",err);
+			});
 		}
 	},
 	render(){
